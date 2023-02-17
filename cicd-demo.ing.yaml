@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cicd-demo
+  namespace: cicd-demo
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+      - ap2.iisi-ap.com
+    secretName: tls-cert
+  rules:
+  - host: ap2.iisi-ap.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: cicd-demo
+            port:
+              number: 80
