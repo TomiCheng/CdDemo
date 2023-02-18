@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cicd-demo
-          image: peterlin005/ci-demo:0.1
+          image: peterlin005/ci-demo:2d5f7d0
           ports:
             - containerPort: 80
       imagePullSecrets:
