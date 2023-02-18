@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  namespace: ci-demo
   name: cicd-demo
-  namespace: cicd-demo
 spec:
   ingressClassName: nginx
   tls:
